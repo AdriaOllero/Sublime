@@ -1,0 +1,50 @@
+<nav class=" navbar-expand-lg " aria-label="Eighth navbar example"
+  [ngClass]="{'navbar':!navbarColor,'navbarUserCheck':navbarColor }">
+  <div class="container">
+    <a href="/" >
+    <img style="margin-bottom: -10px;" class="image" src="../../../assets/images/sublimin.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+      aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto" [ngClass]="{'navbar-navback':navbarColor,'navbar-nav':!navbarColor}">
+        <li class="nav-item search-offers">
+         <a routerLink="/search" >Buscar Ofertas</a>
+        </li>
+        <li class="nav-item">
+          <a href="/company-profile">Mis publicaciones</a>
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <form *ngIf="showLogin">
+        <a routerLink="/login">Iniciar sesión</a>
+        <button type="button"   class="btn btn-light">Publicar oferta</button>
+
+      </form>
+
+      <form *ngIf="showUser" >
+        <div class="btn-group" >
+          <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            {{userName}}
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Editar Datos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+
+          </ul>
+          <div class="square">
+            <h5>A</h5>
+          </div>
+        </div>
+
+        <button type="button" routerLink="/addOffer" class="btn btn-light">Publicar oferta</button>
+
+      </form>
+
+    </div>
+  </div>
+</nav>

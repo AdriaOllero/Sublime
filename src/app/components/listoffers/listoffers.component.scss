@@ -1,0 +1,73 @@
+$normalTextSize: 16px;
+.card {
+    height: 120px;
+    width: 800px;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    margin-top: -0.5%;
+    p {
+        font-size: $normalTextSize;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: $normalTextSize;
+    }
+    h5 {
+        font-size: $normalTextSize;
+    }
+    img{
+      width: 70%;
+      padding: 20px;
+      margin-left: 30px;
+    }
+    .card-color {
+        width: fit-content;
+        border-radius: 10px;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .color-blue {
+        background-color: rgba(0, 108, 250, 0.2);
+        color: blue;
+
+    }
+    .color-pink {
+      background-color: rgba(229, 0, 250, 0.2);
+      color: rgb(204, 0, 255);
+
+  }
+    .color-green {
+        background-color: rgba(2, 216, 2, 0.2);
+        color: green;
+    }
+    .color-purple {
+        background-color: rgba(212, 0, 255, 0.2);
+        color: purple;
+    }
+    .color-orange {
+        background-color: rgba(255, 166, 0, 0.2);
+        color: rgb(255, 166, 0);
+    }
+    .color-red {
+        background-color: rgba(255, 0, 0, 0.2);
+        color: red;
+    }
+    .card-text{
+        margin-top: 40px;
+        height: fit-content;
+        padding-bottom: 4%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .create-offer {
+        visibility: hidden;
+    }
+    .col-sm {
+        visibility: visible;
+    }
+}

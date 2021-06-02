@@ -1,0 +1,26 @@
+<div class="offers" >
+    <div class="card mb-3" routerLink="detail/{{jobOffer._id}}">
+        <div class="row g-0">
+            <div class="col">
+                <img src="{{jobOffer.photo}}" alt="...">
+            </div>
+            <div class="col-xxl">
+             <div class="card-body">
+                  <h4 class="card-title">{{jobOffer.name}}</h4>
+                  <h2><small class="text-muted">{{jobOffer.companyName}}</small></h2>
+            </div>
+        </div>
+            <div class="col-md">
+                <p class="card-text"><small class="text-muted">{{jobOffer.location}}</small></p>
+            </div>
+            <div class="col-md">
+                <div class="card-color" [ngClass]="{'color-blue': (jobOffer.type ==='Tiempo completo' || jobOffer.type ==='Full-time' ),'color-pink': (jobOffer.type ==='Interno' || jobOffer.type ==='Internship' ), 'color-green': jobOffer.type ==='Freelancer', 'color-purple': (jobOffer.type ==='Tiempo parcial' || jobOffer.type ==='Partial' ), 'color-orange': (jobOffer.type ==='Practice' || jobOffer.type ==='Prácticas' ), 'color-red': (jobOffer.type ==='Proyecto' || jobOffer.type ==='Project' )}">
+                    <h5 class="card-text"><small>{{jobOffer.type}}</small></h5>
+                </div>
+            </div>
+            <div class="col-md create-offer">
+                <p class="card-text"><small class="text-muted">{{jobOffer.updatedAt}}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
